@@ -30,7 +30,7 @@
 		2A459EE32906F8F000527F6C /* DS100Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS100Data.swift; sourceTree = "<group>"; };
 		2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = D_Bahnhof_2020_alle.CSV; sourceTree = "<group>"; };
 		2A459EE929071DB200527F6C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; sourceTree = "<group>"; };
+		2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; path = "../DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				2A459ECC2906F81E00527F6C /* DS100ify */,
-				2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */,
 				2A459ECB2906F81E00527F6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +72,7 @@
 				2A459EE32906F8F000527F6C /* DS100Data.swift */,
 				2A459EE929071DB200527F6C /* StringExtension.swift */,
 				2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */,
+				2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */,
 			);
 			path = DS100ify;
 			sourceTree = "<group>";
