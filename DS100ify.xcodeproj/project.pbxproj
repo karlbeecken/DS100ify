@@ -31,6 +31,7 @@
 		2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = D_Bahnhof_2020_alle.CSV; sourceTree = "<group>"; };
 		2A459EE929071DB200527F6C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; path = "../DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; sourceTree = "<group>"; };
+		2A459EEF29072ADD00527F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		2A459ECC2906F81E00527F6C /* DS100ify */ = {
 			isa = PBXGroup;
 			children = (
+				2A459EEF29072ADD00527F6C /* Info.plist */,
 				2A459ECD2906F81E00527F6C /* DS100ifyApp.swift */,
 				2A459ECF2906F81E00527F6C /* ContentView.swift */,
 				2A459ED12906F81F00527F6C /* Assets.xcassets */,
@@ -299,6 +301,7 @@
 				DEVELOPMENT_TEAM = H8AB6SLK5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DS100ify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +331,7 @@
 				DEVELOPMENT_TEAM = H8AB6SLK5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DS100ify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
