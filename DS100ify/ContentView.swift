@@ -15,30 +15,74 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    @State private var searchText = ""
+    @State var showAbout: Bool = false
+    
+    @ObservedObject var data: DS100Data
+    
+    var filteredData: [IntEntry] {
+        if searchText.isEmpty {
+            return data.intData
+        } else {
+            return data.intData.filter { !($0.RL100Langname.replacingOccurrences(of: "-", with: " ").fuzzyMatch(searchText)!.isEmpty) }.sorted { $0.RL100Code < $1.RL100Code }
+        }
+    }
 
     var body: some View {
+        
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            
+            if (data.intData.isEmpty) {
+                ProgressView().onAppear(perform: loadData)
+            } else {
+                List(filteredData) { item in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(item.RL100Code).bold()
+                                Text(item.RL100Langname)
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                .refreshable {
+                    print("refresh")
+                }
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+                .navigationTitle("Betriebsstellen")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {
+                            showAbout = true
+                        }, label: {
+                            Label("About", systemImage: "info.circle")
+                        })
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                .sheet(isPresented: $showAbout) {
+                    NavigationView {
+                        VStack(alignment: .leading) {
+                            Text("Data by [Deutsche Bahn AG](https://data.deutschebahn.com/dataset/data-betriebsstellen.html), CC BY 4.0").multilineTextAlignment(.leading)
+                            Spacer()
+                            Text("© \(String(Calendar.current.component(.year, from: Date()))) Karl Beecken. Source code available under the [MIT license](https://opensource.org/licenses/MIT).").italic().multilineTextAlignment(.center)
+                        }
+                        .padding()
+                        .navigationTitle("About")
+                        .toolbar {
+                            ToolbarItem(placement: .primaryAction) {
+                                Button(action: {
+                                    showAbout = false
+                                }, label: {
+                                    Text("Done")
+                                })
+                            }
+                        }
                     }
                 }
+
             }
-            Text("Select an item")
         }
     }
 
@@ -72,6 +116,11 @@ struct ContentView: View {
             }
         }
     }
+    
+    private func loadData() {
+        data.load()
+        data.loadInt()
+    }
 }
 
 private let itemFormatter: DateFormatter = {
@@ -83,6 +132,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(data: DS100Data()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

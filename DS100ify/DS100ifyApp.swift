@@ -13,7 +13,7 @@ struct DS100ifyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(data: DS100Data())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
