@@ -66,7 +66,7 @@ struct ContentView: View {
                         VStack(alignment: .leading) {
                             Text("Data by [Deutsche Bahn AG](https://data.deutschebahn.com/dataset/data-betriebsstellen.html), CC BY 4.0").multilineTextAlignment(.leading)
                             Spacer()
-                            Text("© \(String(Calendar.current.component(.year, from: Date()))) Karl Beecken. Source code available under the [MIT license](https://opensource.org/licenses/MIT).").italic().multilineTextAlignment(.center)
+                            Text("© \(String(Calendar.current.component(.year, from: Date()))) Karl Beecken. Source code available under the [MIT license](https://github.com/karlbeecken/DS100ify/blob/main/LICENSE).").italic().multilineTextAlignment(.center)
                         }
                         .padding()
                         .navigationTitle("About")
