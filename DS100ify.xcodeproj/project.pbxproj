@@ -16,7 +16,7 @@
 		2A459EE42906F8F000527F6C /* DS100Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A459EE32906F8F000527F6C /* DS100Data.swift */; };
 		2A459EE82906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV in Resources */ = {isa = PBXBuildFile; fileRef = 2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */; };
 		2A459EEA29071DB200527F6C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A459EE929071DB200527F6C /* StringExtension.swift */; };
-		2A459EEE290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */; };
+		2A98B50229072B3000104956 /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2A98B50129072B3000104956 /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		2A459EE32906F8F000527F6C /* DS100Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS100Data.swift; sourceTree = "<group>"; };
 		2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = D_Bahnhof_2020_alle.CSV; sourceTree = "<group>"; };
 		2A459EE929071DB200527F6C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; path = "../DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; sourceTree = "<group>"; };
 		2A459EEF29072ADD00527F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A98B50129072B3000104956 /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; path = "../../../../Downloads/DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				2A459EE32906F8F000527F6C /* DS100Data.swift */,
 				2A459EE929071DB200527F6C /* StringExtension.swift */,
 				2A459EE72906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV */,
-				2A459EED290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */,
+				2A98B50129072B3000104956 /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv */,
 			);
 			path = DS100ify;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				2A459ED52906F81F00527F6C /* Preview Assets.xcassets in Resources */,
 				2A459EE82906F9CC00527F6C /* D_Bahnhof_2020_alle.CSV in Resources */,
 				2A459ED22906F81F00527F6C /* Assets.xcassets in Resources */,
-				2A459EEE290726B500527F6C /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv in Resources */,
+				2A98B50229072B3000104956 /* DBNetz-Betriebsstellenverzeichnis-Stand2021-10.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
